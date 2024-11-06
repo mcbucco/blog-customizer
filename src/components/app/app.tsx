@@ -9,22 +9,21 @@ import '../../styles/index.scss';
 import styles from '../../styles/index.module.scss';
 
 export const App = () => {
-	const [defaultArticleSettings, setDefaultArticleSettings] =
-		useState(defaultArticleState);
+	const [ArticleSettings, setArticleSettings] = useState(defaultArticleState);
 
 	return (
 		<main
 			className={styles.main}
 			style={
 				{
-					'--font-family': defaultArticleSettings.fontFamilyOption.value,
-					'--font-size': defaultArticleSettings.fontSizeOption.value,
-					'--font-color': defaultArticleSettings.fontColor.value,
-					'--container-width': defaultArticleSettings.contentWidth.value,
-					'--bg-color': defaultArticleSettings.backgroundColor.value,
+					'--font-family': ArticleSettings.fontFamilyOption.value,
+					'--font-size': ArticleSettings.fontSizeOption.value,
+					'--font-color': ArticleSettings.fontColor.value,
+					'--container-width': ArticleSettings.contentWidth.value,
+					'--bg-color': ArticleSettings.backgroundColor.value,
 				} as CSSProperties
 			}>
-			<ArticleParamsForm applyChanges={setDefaultArticleSettings} />
+			<ArticleParamsForm applyChanges={setArticleSettings} />
 			<Article />
 		</main>
 	);
