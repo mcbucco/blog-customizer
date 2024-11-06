@@ -5,7 +5,6 @@ import { defaultArticleState } from 'src/constants/articleProps';
 import { Article } from '../article';
 import { ArticleParamsForm } from '../article-params-form';
 
-import '../../styles/index.scss';
 import styles from '../../styles/index.module.scss';
 
 export const App = () => {
